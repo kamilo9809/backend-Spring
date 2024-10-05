@@ -1,16 +1,13 @@
-package com.modulo.backend;
+package com.group_3.Backend_springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class BackendSpringbootApplication {
 
 	public static void main(String[] args) {
-
-		System.out.println("hola mundo");
-
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(BackendSpringbootApplication.class, args);
 	}
 
 }
