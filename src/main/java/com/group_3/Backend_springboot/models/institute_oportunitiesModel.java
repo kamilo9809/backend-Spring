@@ -1,4 +1,4 @@
 package com.group_3.Backend_springboot.models;
 
-public class BootcampsModels {
+public class institute_oportunitiesModel {
 }
