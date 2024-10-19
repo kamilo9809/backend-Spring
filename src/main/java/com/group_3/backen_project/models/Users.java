@@ -3,8 +3,6 @@ package com.group_3.backen_project.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
-
 @Entity
 @Table(name = "users")
 @Data

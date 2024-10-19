@@ -1,4 +1,4 @@
 package com.group_3.backen_project.models;
 
-public class institute_oportunities {
+public class Topics_bootcamps {
 }
