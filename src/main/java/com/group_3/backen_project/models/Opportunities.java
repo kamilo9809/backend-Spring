@@ -8,4 +8,34 @@ public class Opportunities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "id_categories", referencedColumnName = "id")
+    private Categories_opportunities idCategories;
+
+    @OneToOne
+    @JoinColumn(name = "id_status_review", referencedColumnName = "id")
+    private Status_opportunities idStatus;
+
+    @OneToOne
+    @JoinColumn(name = "oportunity_type", referencedColumnName = "id")
+    private Type_opportunities typeOpportunities;
+
+    private String observations;
+
+    private String  name;
+
+    private String descriptions;
+
+    private String aplications;
+
+    private String requeriments; 
+    
+    private String guide; 
+
+    @Column(name = "adicional_dates")
+    private String adicionalDates; 
+    
+    @Column(name = "contact_channels")
+    private String ContactChannels; 
 }
