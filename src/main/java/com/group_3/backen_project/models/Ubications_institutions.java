@@ -8,4 +8,7 @@ public class Ubications_institutions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Column(length = 144)
+    private String zona;
 }
