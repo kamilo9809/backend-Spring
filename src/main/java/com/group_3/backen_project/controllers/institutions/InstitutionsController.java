@@ -51,7 +51,7 @@ public class InstitutionsController {
             @PathVariable Long idUbication,
             @RequestBody Institutions detailInstitutions) {
         return ResponseEntity
-                .ok(institutionsServices.createInstitutions(detailInstitutions, idStatus, idUbication));
+                .ok(institutionsServices.updateInstitutions(id,detailInstitutions, idStatus, idUbication));
     }
 
     @DeleteMapping("/{id}")

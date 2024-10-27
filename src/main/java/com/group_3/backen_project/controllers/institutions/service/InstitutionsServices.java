@@ -55,11 +55,14 @@ public class InstitutionsServices {
             Long idStatus, Long idUbications) {
         Institutions institutions = institutionsRepository.findById(id).orElseThrow();
 
-        Status_institutions status = institutions.getIdStatus();
-        status.setId(idStatus);
+        Status_institutions status = statusInstitutionsRepository.findById(idStatus)
+                .orElseThrow(() -> new RuntimeException("id status not found"));
 
-        Ubications_institutions ubications = institutions.getUbicationsInstitutions();
-        ubications.setId(idUbications);
+        Ubications_institutions ubications = ubicationsInstitutionsRepository.findById(idUbications)
+                .orElseThrow(() -> new RuntimeException("id Ubications not found"));
+
+        institutions.setIdStatus(status);
+        institutions.setUbicationsInstitutions(ubications);
 
         institutions.setDirections(detaiInstitutions.getDirections());
         institutions.setGeneralLink(detaiInstitutions.getGeneralLink());

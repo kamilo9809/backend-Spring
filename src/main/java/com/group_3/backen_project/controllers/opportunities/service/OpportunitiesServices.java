@@ -66,14 +66,18 @@ public class OpportunitiesServices {
             Long idStatus, Long idType) {
         Opportunities opportunities = opportunitiesRepository.findById(id).orElseThrow();
 
-        Categories_opportunities categoriesOpportunities = opportunities.getIdCategories();
-        categoriesOpportunities.setId(idCategories);
+        Categories_opportunities categories_opportunities = categoriesOpportunitiesRepository.findById(idCategories)
+                .orElseThrow(() -> new RuntimeException("id Categories not found"));
 
-        Status_opportunities statusOpportunities = opportunities.getIdStatus();
-        statusOpportunities.setId(idStatus);
+        Status_opportunities status_opportunities = statusOpportunitiesRepository.findById(idStatus)
+                .orElseThrow(() -> new RuntimeException("id Status not found"));
 
-        Type_opportunities type = opportunities.getTypeOpportunities();
-        type.setId(idType);
+        Type_opportunities type_opportunities = typeOpportunitiesRepository.findById(idType)
+                .orElseThrow(() -> new RuntimeException("id type opportunity not found"));
+
+        opportunities.setIdCategories(categories_opportunities);
+        opportunities.setIdStatus(status_opportunities);
+        opportunities.setTypeOpportunities(type_opportunities);
 
         opportunities.setObservations(detailOpportunities.getObservations());
         opportunities.setName(detailOpportunities.getName());
