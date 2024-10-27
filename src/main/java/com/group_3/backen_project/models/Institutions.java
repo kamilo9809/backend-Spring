@@ -11,11 +11,11 @@ public class Institutions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_status", referencedColumnName = "id")
     private Status_institutions idStatus;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ubications_institutions", referencedColumnName = "id")
     private Ubications_institutions ubicationsInstitutions;
 

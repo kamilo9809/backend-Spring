@@ -11,15 +11,15 @@ public class Opportunities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_categories", referencedColumnName = "id")
     private Categories_opportunities idCategories;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_status_review", referencedColumnName = "id")
     private Status_opportunities idStatus;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "oportunity_type", referencedColumnName = "id")
     private Type_opportunities typeOpportunities;
 

@@ -15,11 +15,11 @@ public class Bootcamps {
     private Long id;
 
     @NotBlank(message = "El idGeneral es obligatorio")
-    @OneToOne
+    @ManyToOne
     private Descriptions_bootcamps idGeneral;
 
     @NotBlank(message = "El idTemas es obligatorio")
-    @OneToOne
+    @ManyToOne
     private Topics_bootcamps idTemas;
 
     @NotBlank(message = "El nombre es obligatorio")
@@ -28,10 +28,10 @@ public class Bootcamps {
     private String nombre;
 
     @NotBlank(message = "El idCostos es obligatorio")
-    @OneToOne
+    @ManyToOne
     private Costs_bootcamps idCostos;
 
     @NotBlank(message = "El idEstado es obligatorio")
-    @OneToOne
+    @ManyToOne
     private Status_bootcamps idEstado;
 }

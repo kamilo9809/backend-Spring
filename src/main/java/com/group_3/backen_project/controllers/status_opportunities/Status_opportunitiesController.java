@@ -27,7 +27,7 @@ public class Status_opportunitiesController {
     private Status_opportunitiesServices statusOpportunitiesServices;
 
     @PostMapping
-    public Status_opportunities postStatus(Status_opportunities status_opportunities) {
+    public Status_opportunities postStatus(@RequestBody Status_opportunities status_opportunities) {
         return statusOpportunitiesServices.createStatus(status_opportunities);
     }
 

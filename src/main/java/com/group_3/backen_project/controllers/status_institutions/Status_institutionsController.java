@@ -23,7 +23,7 @@ public class Status_institutionsController {
     private Status_institutionsServices statusInstitutionsServices;
 
     @PostMapping
-    public Status_institutions postStatus(Status_institutions statusInstitutions) {
+    public Status_institutions postStatus(@RequestBody Status_institutions statusInstitutions) {
         return statusInstitutionsServices.createStatus(statusInstitutions);
     }
 
