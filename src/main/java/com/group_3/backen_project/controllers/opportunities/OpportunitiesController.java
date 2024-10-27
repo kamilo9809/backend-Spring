@@ -47,10 +47,15 @@ public class OpportunitiesController {
         return opportunity.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Opportunities> putOpportunities(@PathVariable Long id,
+    @PutMapping("/{id}/{idCategories}/{idStatus}/{idType}")
+    public ResponseEntity<Opportunities> putOpportunities(
+            @PathVariable Long id,
+            @PathVariable Long idCategories,
+            @PathVariable Long idStatus,
+            @PathVariable Long idType,
             @RequestBody Opportunities detailOpportunities) {
-        return ResponseEntity.ok(opportunitiesServices.updateOpportunities(id, detailOpportunities));
+        return ResponseEntity
+                .ok(opportunitiesServices.updateOpportunities(id, detailOpportunities, idCategories, idStatus, idType));
     }
 
     @DeleteMapping("/{id}")

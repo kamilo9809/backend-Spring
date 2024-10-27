@@ -25,11 +25,12 @@ public class Opportunities {
 
     private String observations;
 
-    private String  name;
+    private String name;
 
     private String descriptions;
 
-    private String aplications;
+    @Column(length = 144)
+    private String applications;
 
     private String requeriments; 
     
@@ -39,5 +40,5 @@ public class Opportunities {
     private String adicionalDates; 
     
     @Column(name = "contact_channels")
-    private String ContactChannels; 
+    private String contactChannels; 
 }

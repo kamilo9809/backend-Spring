@@ -54,20 +54,31 @@ public class OpportunitiesServices {
         return opportunitiesRepository.save(opportunities);
     }
 
-     public Optional<Opportunities> getOpportunitiesById(Long id){
+    public Optional<Opportunities> getOpportunitiesById(Long id) {
         return opportunitiesRepository.findById(id);
     }
 
-    public List<Opportunities> getOpportunitiesAll(){
+    public List<Opportunities> getOpportunitiesAll() {
         return opportunitiesRepository.findAll();
     }
 
-    public Opportunities updateOpportunities(Long id, Opportunities detailOpportunities){
+    public Opportunities updateOpportunities(Long id, Opportunities detailOpportunities, Long idCategories,
+            Long idStatus, Long idType) {
         Opportunities opportunities = opportunitiesRepository.findById(id).orElseThrow();
+
+        Categories_opportunities categoriesOpportunities = opportunities.getIdCategories();
+        categoriesOpportunities.setId(idCategories);
+
+        Status_opportunities statusOpportunities = opportunities.getIdStatus();
+        statusOpportunities.setId(idStatus);
+
+        Type_opportunities type = opportunities.getTypeOpportunities();
+        type.setId(idType);
+
         opportunities.setObservations(detailOpportunities.getObservations());
         opportunities.setName(detailOpportunities.getName());
         opportunities.setDescriptions(detailOpportunities.getDescriptions());
-        opportunities.setAplications(detailOpportunities.getAplications());
+        opportunities.setApplications(detailOpportunities.getApplications());
         opportunities.setRequeriments(detailOpportunities.getRequeriments());
         opportunities.setGuide(detailOpportunities.getGuide());
         opportunities.setAdicionalDates(detailOpportunities.getAdicionalDates());
@@ -75,7 +86,7 @@ public class OpportunitiesServices {
         return opportunitiesRepository.save(opportunities);
     }
 
-    public void deleteOpportunities(Long id){
+    public void deleteOpportunities(Long id) {
         opportunitiesRepository.deleteById(id);
     }
 
