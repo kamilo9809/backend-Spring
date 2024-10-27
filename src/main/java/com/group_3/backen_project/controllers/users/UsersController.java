@@ -16,7 +16,7 @@ public class UsersController {
     private UsersService usersService;
 
     @PostMapping
-    public Users createUser(@RequestBody Users user){
+    public Users createUser(@RequestBody Users user) {
         return usersService.createUser(user);
     }
 
@@ -29,14 +29,11 @@ public class UsersController {
     public ResponseEntity<Users> getUserById(@PathVariable Long id) {
         Optional<Users> user = usersService.getUserById(id);
 
-        return user.map(ResponseEntity::ok).orElseGet(() ->
-
-                ResponseEntity.notFound().build());
+        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Users> updateUser(@PathVariable Long id, @RequestBody
-    Users userDetails) {
+    public ResponseEntity<Users> updateUser(@PathVariable Long id, @RequestBody Users userDetails) {
         return ResponseEntity.ok(usersService.updateUser(id, userDetails));
     }
 
