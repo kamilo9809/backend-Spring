@@ -11,7 +11,7 @@ public class Institute_opportunities {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_institutions", referencedColumnName = "id")
     private Institutions institutions;
 

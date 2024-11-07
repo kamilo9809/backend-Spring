@@ -15,7 +15,7 @@ public class Institute_bootcamps {
     @JoinColumn(name = "id_institutions", referencedColumnName = "id")
     private Institutions institutions;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_bootcamps", referencedColumnName = "id")
     private Bootcamps bootcamps; 
 }

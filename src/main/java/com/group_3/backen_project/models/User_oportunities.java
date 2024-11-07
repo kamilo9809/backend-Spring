@@ -15,7 +15,7 @@ public class User_oportunities {
     @JoinColumn(name = "id_user", referencedColumnName = "id")
     private Users users;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_opportunity", referencedColumnName = "id")
     private Opportunities opportunities;
 }
