@@ -8,4 +8,12 @@ public class Institute_opportunities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToMany
+    @JoinColumn(name = "id_institutions", referencedColumnName = "id")
+    private Institutions institutions;
+
+    @ManyToOne
+    @JoinColumn(name = "id_opportunities", referencedColumnName = "id")
+    private Opportunities opportunities;
 }
