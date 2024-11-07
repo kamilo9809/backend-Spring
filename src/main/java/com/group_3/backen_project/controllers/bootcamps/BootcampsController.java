@@ -60,7 +60,8 @@ public class BootcampsController {
         ) {
         
         return ResponseEntity
-            .ok(bootcampsSevices.updateBootcamps(idStatus, detailBootcamps, idDescription, idTopics, idCosts, idStatus));
+            .ok(bootcampsSevices.updateBootcamps(idStatus, detailBootcamps, 
+            idDescription, idTopics, idCosts, idStatus));
     }
 
     @DeleteMapping("/{id}")
