@@ -74,13 +74,20 @@ public class UsersService implements UserDetailsService {
         return userRepository.findAll();
     }
 
-    public Users updateUser(Long id, Users userDetails) {
+    public Users updateUser(Long id,Long idRole, Users userDetails) {
+
+        Role role = roleRepository.findById(idRole)
+            .orElseThrow(() -> new RuntimeException("id Role not found"));
+
         Users user = userRepository.findById(id).orElseThrow();
         user.setName(userDetails.getName());
         user.setLastName(userDetails.getLastName());
         user.setDateBirth(userDetails.getDateBirth());
         user.setEmail(userDetails.getEmail());
         user.setPassword(passwordEncoder().encode(userDetails.getPassword()));
+        Set<Role> roles = new HashSet<>();
+        roles.add(role);
+        user.setRoles(roles);
         return userRepository.save(user);
     }
 
