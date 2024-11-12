@@ -41,7 +41,6 @@ Este es un proyecto de backend desarrollado con Spring Boot y Maven. Proporciona
    cd tu-repositorio
 
 2. Configura el archivo src/main/resources/application.properties:
-
 # Configuración de la Base de Datos
 spring.datasource.url=jdbc:mysql://localhost:3306/Antivirus_db
 spring.datasource.username=fundacion_antivirus
@@ -101,4 +100,3 @@ Sube tus cambios (git push origin feature/nueva-funcionalidad).
 Abre un Pull Request.
 
 ## Postman
-
