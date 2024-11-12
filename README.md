@@ -215,3 +215,7 @@ Las contribuciones son bienvenidas. Si deseas contribuir:
 ## Postman
 
 [Toca este enlace para que puedas hacer las pruebas en un entorno postman](https://app.getpostman.com/join-team?invite_code=710f31ce1d29e38f84633fdc69b0b0a8&target_code=a4bf62fa68328a929a13aedc36b7fbed)
+
+## Tabla de relacion de entidades
+[estructura backend relacional.pdf](https://github.com/user-attachments/files/17712270/estructura.backend.relacional.pdf)
+
