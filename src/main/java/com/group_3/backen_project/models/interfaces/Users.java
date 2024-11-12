@@ -6,5 +6,4 @@ public interface Users {
     String getDateBirth();
     String getEmail();
     String getPassword();
-    String getRol();
 }
