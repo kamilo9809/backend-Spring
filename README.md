@@ -20,7 +20,7 @@ Este es un proyecto de backend desarrollado con Spring Boot y Maven. Proporciona
 - **Base de Datos Relacional**: Persistencia de datos utilizando Hibernate con JPA.
 
 ## Tecnologías Usadas
-- **Java 17**
+- **Java 21**
 - **Spring Boot 3**
 - **Maven**
 - **Spring Security**
@@ -41,8 +41,6 @@ Este es un proyecto de backend desarrollado con Spring Boot y Maven. Proporciona
    cd tu-repositorio
 
 2. Configura el archivo src/main/resources/application.properties:
-
-properties
 # Configuración de la Base de Datos
 spring.datasource.url=jdbc:mysql://localhost:3306/Antivirus_db
 spring.datasource.username=fundacion_antivirus
