@@ -74,7 +74,7 @@ CREATE DATABASE reto_backend;
 
 CREATE USER 'fundacion_antivirus'@'localhost' IDENTIFIED BY 'Antivirus';
 
-GRANT ALL PRIVILEGES ON Antivirus_db.* TO 'fundacion_antivirus'@'localhost';
+GRANT ALL PRIVILEGES ON reto_backend.* TO 'fundacion_antivirus'@'localhost';
 
 FLUSH PRIVILEGES;
 ```
