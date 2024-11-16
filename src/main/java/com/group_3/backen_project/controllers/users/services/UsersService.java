@@ -94,4 +94,8 @@ public class UsersService implements UserDetailsService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+    public Users getByEmail(String email){
+        return userRepository.findByEmail(email);
+    }
 }

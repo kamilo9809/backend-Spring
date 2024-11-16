@@ -1,5 +1,7 @@
 package com.group_3.backen_project.controllers.auth;
 
+import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,7 +37,7 @@ public class Auth {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<String> authenticate(@RequestBody UserAuth userAuth){
+    public ResponseEntity<Object> authenticate(@RequestBody UserAuth userAuth){
         System.out.println("ingresando a authenticate");
         System.out.println(userAuth);
         try {
@@ -45,7 +47,11 @@ public class Auth {
             );
 
             String token = jwtTokenProvider.generateToken(authentication);
-            return ResponseEntity.ok(token);
+
+            Users users = usersService.getByEmail(userAuth.getEmail());
+
+            System.out.println("se ha autenticado con exito");
+            return ResponseEntity.ok().body(Map.of("token",token,"role",users.getRoles()));
         } catch (UsernameNotFoundException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not found");
         } catch (BadCredentialsException e){
