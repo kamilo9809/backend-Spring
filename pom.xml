@@ -12,7 +12,7 @@
 	<groupId>com.group-3</groupId>
 	<artifactId>backen-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>backen-project</name>
 	<description>solucion 2do desafio reto tecnico</description>
 	<url />
