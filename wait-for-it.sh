@@ -7,10 +7,11 @@ host="$1"
 shift
 cmd="$@"
 
-until nc -z "$host"; do
-  >&2 echo "Waiting for $host to be available..."
+# Intentar conectar a MySQL usando el cliente de línea de comandos
+until mysql -h "$host" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" -e "SELECT 1" > /dev/null 2>&1; do
+  >&2 echo "Waiting for MySQL at $host to be available..."
   sleep 1
 done
 
->&2 echo "$host is up - executing command"
+>&2 echo "MySQL is up - executing command"
 exec $cmd
