@@ -24,7 +24,7 @@ services:
       MYSQL_USER: fundacion_antivirus
       MYSQL_PASSWORD: Antivirus
     ports:
-      - "53:3306"
+      - "3306:3306"
     networks:
       - backend
 
