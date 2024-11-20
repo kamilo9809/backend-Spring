@@ -13,6 +13,7 @@ services:
       - db-mysql
     networks:
       - backend
+    entrypoint: ["dockerize", "-wait", "tcp://db-mysql:3306", "-timeout", "30s", "java", "-jar", "app.jar"]
 
   db-mysql:
     image: mysql:latest
@@ -23,7 +24,7 @@ services:
       MYSQL_USER: fundacion_antivirus
       MYSQL_PASSWORD: Antivirus
     ports:
-      - "53:3306"
+      - "3306:3306"
     networks:
       - backend
 
