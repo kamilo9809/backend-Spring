@@ -5,6 +5,7 @@ com\group_3\backen_project\models\interfaces\Bootcamps.class
 com\group_3\backen_project\repositories\InstituteBootcampsRepository.class
 com\group_3\backen_project\controllers\role\service\RoleService.class
 com\group_3\backen_project\controllers\institute_oportunities\service\Institute_oportunitiesservice.class
+com\group_3\backen_project\controllers\authSocial\AuthSocialController.class
 com\group_3\backen_project\controllers\costs_bootcamps\service\Costs_bootcampsServices.class
 com\group_3\backen_project\repositories\StatusInstitutionsRepository.class
 com\group_3\backen_project\controllers\categories_opportunities\services\Categories_OpportunitiesService.class
@@ -39,6 +40,7 @@ com\group_3\backen_project\models\Status_institutions.class
 com\group_3\backen_project\controllers\users\UsersController.class
 com\group_3\backen_project\dto\RoleDto.class
 com\group_3\backen_project\models\interfaces\Descriptions_bootcamps.class
+com\group_3\backen_project\dto\AuthSocial.class
 com\group_3\backen_project\models\interfaces\institute_bootcamps.class
 com\group_3\backen_project\repositories\CostsBootcampsRepository.class
 com\group_3\backen_project\controllers\role\RoleController.class

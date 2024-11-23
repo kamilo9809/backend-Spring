@@ -64,8 +64,8 @@ public class Auth {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody Users users){
+    public ResponseEntity<Object> register(@RequestBody Users users){
         usersService.createUser(users);
-        return ResponseEntity.ok("User register succesfully");
+        return ResponseEntity.ok().body(Map.of("message","User register succesfully"));
     }
 }

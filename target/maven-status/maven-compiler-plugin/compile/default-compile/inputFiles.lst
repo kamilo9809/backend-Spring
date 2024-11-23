@@ -4,6 +4,8 @@ C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backen
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\config\SwaggerConfig.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\adminController\AdminController.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\auth\Auth.java
+C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\authSocial\AuthSocialController.java
+C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\authSocial\service\AuthSocialService.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\bootcamps\BootcampsController.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\bootcamps\service\BootcampsSevices.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\categories_opportunities\Categories_opportunitiesController.java
@@ -40,6 +42,7 @@ C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backen
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\user_oportunities\User_oportunitiesController.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\users\services\UsersService.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\controllers\users\UsersController.java
+C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\dto\AuthSocial.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\dto\RoleDto.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\dto\UserAuth.java
 C:\Users\camil\OneDrive\Escritorio\proyectos de programacion\proyectoJava\backend-Spring\src\main\java\com\group_3\backen_project\jwt\JwtAuthenticationFilter.java

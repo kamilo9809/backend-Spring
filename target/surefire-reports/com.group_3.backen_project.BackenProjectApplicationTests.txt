@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.group_3.backen_project.BackenProjectApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.34 s -- in com.group_3.backen_project.BackenProjectApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.63 s -- in com.group_3.backen_project.BackenProjectApplicationTests
