@@ -64,6 +64,8 @@ public class InstitutionsServices {
         institutions.setIdStatus(status);
         institutions.setUbicationsInstitutions(ubications);
 
+        institutions.setName(detaiInstitutions.getName());
+        institutions.setObservations(detaiInstitutions.getObservations());
         institutions.setDirections(detaiInstitutions.getDirections());
         institutions.setGeneralLink(detaiInstitutions.getGeneralLink());
         institutions.setCarerLink(detaiInstitutions.getCarerLink());

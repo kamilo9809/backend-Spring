@@ -100,6 +100,7 @@ public class BootcampsSevices {
         bootcamps.setIdEstado(status);
 
         bootcamps.setNombre(detailsbootcamps.getNombre());
+        bootcamps.setInformacion(detailsbootcamps.getInformacion());
 
         return bootcampsRepository.save(bootcamps);
     }

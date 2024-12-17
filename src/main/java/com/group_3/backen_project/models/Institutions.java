@@ -19,6 +19,10 @@ public class Institutions {
     @JoinColumn(name = "ubications_institutions", referencedColumnName = "id")
     private Ubications_institutions ubicationsInstitutions;
 
+    private String name;
+
+    private String observations;
+
     private String directions;
 
     @Column(name = "general_link")

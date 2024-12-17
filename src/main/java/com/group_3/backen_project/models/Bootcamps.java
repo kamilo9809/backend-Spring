@@ -27,6 +27,8 @@ public class Bootcamps {
     @Column(nullable = false, length = 100)
     private String nombre;
 
+    private String informacion;
+
     @NotBlank(message = "El idCostos es obligatorio")
     @ManyToOne
     private Costs_bootcamps idCostos;
